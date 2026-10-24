@@ -2,7 +2,7 @@
 Small CTF repo with starter code primarially to convert hex strings to bytes and back to hex or ASCII.
 
 There are currently 4 flags.\
-They are saved as a Hex String, so I included starter code in `Starter_Code/<Python/Java>` to help with conversions.
+They are saved as a Hex String, so I included starter code in `Starter_Code/<Python/Java>` to help with conversions. See []\
 - [ASCII](#ASCII)
 - [Caesar Cipher](#Caesar)
 - [XOR or XNOR](#XOR)
@@ -37,11 +37,12 @@ O = Output\
 | 0 | 1 | 1 |
 | 1 | 1 | 0 |
 
+<a name="StarterCode"></a>
 # Starter code 
 <details>
   <Summary>Python</Summary>
   
-  Two functions.
+  I've written two functions to handle the main conversions.
 
   ```Python
   # Reads in the hex string and returns a bytes object (its an array)
@@ -53,7 +54,7 @@ O = Output\
   # this is typed enforced python
   def funcName(arg : Arg_Type) -> Function_Return_Type:
   ```
-
+  
 </details>
 
 <details>

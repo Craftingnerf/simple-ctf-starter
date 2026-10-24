@@ -6,10 +6,8 @@ public class mian {
             
             System.out.print("Hex Str: ");
             System.out.println(ctf.getHexString());
-            System.out.print("ASCII: ");
-            System.out.println(ctf.getASCII());
             byte[] bytes = ctf.getByteArray();
-            System.out.print("Bytes: ");
+            System.out.print("Bytes Array: ");
             for (int j = 0; j < bytes.length; j++) {
                 if (j != 0)
                     System.out.print(" ");
@@ -19,6 +17,9 @@ public class mian {
             }
             // bytes newline
             System.out.println();
+
+            System.out.print("ASCII: ");
+            System.out.println(ctf.getASCII());
         }
     }
 }
