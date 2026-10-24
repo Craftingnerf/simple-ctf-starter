@@ -42,7 +42,7 @@ The flag has been offset by some number.\
 Thankfully, that number doesn't change!\
 Knowing the flag format will help!
 
-Flag `796f7376726b65697a6c8149394759365865494f564e4b58654f5965595b4883`
+Flag `796f7376726b65697a6c8149394759365865494f564e4b58654f5965595b48595a4f5a5b5a4f555483`
 
 <details>
   <Summary>Hint 1</Summary>
