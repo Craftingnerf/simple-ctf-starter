@@ -2,7 +2,7 @@
 Small CTF repo with starter code primarially to convert hex strings to bytes and back to hex or ASCII.
 
 There are currently 4 flags.\
-They are saved as a Hex String, so I included starter code in `Starter_Code/<Python/Java>` to help with conversions. See [below](#StarterCode) for relevant documentation.\
+They are saved as a Hex String, so I included starter code in `Starter_Code/<Python/Java>` to help with conversions. See [below](#StarterCode) for relevant documentation.
 - [ASCII](#ASCII)
 - [Caesar Cipher](#Caesar)
 - [XOR or XNOR](#XOR)
@@ -137,7 +137,7 @@ Flag `796f7376726b65697a6c8149394759365865494f564e4b58654f5965595b48595a4f5a5b5a
 
   You'll likely need to cast the resulting value back to bytes, and you may need to `%` by `256` or `&` by `0xFF` to properly wrap it around.\
   `%` is the modulo operator. I would describe it as the remainder from long devision. `%` by `256` will return a range of `0-255`.\
-  `&` is bitwise AND, it allows you to filter what bits you see in the resulting value. `&` by `0xFF` will only keep the first byte of the number.\
+  `&` is bitwise AND, it allows you to filter what bits you see in the resulting value. `&` by `0xFF` will only keep the first byte of the number.
 
 </details>
 
