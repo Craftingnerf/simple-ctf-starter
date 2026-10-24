@@ -48,11 +48,11 @@ Flag `73696d706c655f6374667b434834524143543352535f3452335f4e554d383352537d`
 <details>
   <Summary>Hint 2</Summary>
   
-  ## Python
+  **Python**
 
   Use the `readHexStr` function to read the flag to bytes, and then use the `bytesToASCII` function to convert the bytes to ASCII.
 
-  ## Java
+  **Java**
 
   Construct a `SimpleCTF` object (`new SimpleCTF(hexFlag)`) and use it to convert the hex string to ASCII (`ctfObject.getASCII()`).
 </details>
@@ -109,6 +109,9 @@ Flag `62787c617d744e7265776a4921434e58424e5f2250456c`
 
    You can XOR the first character of the flag with `s`, or its ASCII value of `115`, as its the first character in the flag format.\
    The resulting value will be the value used in the XOR operation.
+
+   **NOTE**
+   This challenge has nothing to do with XNOR
 </details>
 
 # Rolling XOR
