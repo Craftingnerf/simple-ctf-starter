@@ -23,15 +23,60 @@ The space inside the `{ }` is where the flags differ.
   - A bitwise operation (operates at the bit level) which is symmetrical ( A XOR B XOR B == A)
   - See its truth table [below](#XORTruthTable)
 
-
 <a name="XORTruthTable"></a>
 **XOR Truth table**
-| A | B | Out |
-|---|---|-----|
-| 0 | 0 |  0  |
-| 1 | 0 |  1  |
-| 0 | 1 |  1  |
-| 1 | 1 |  0  |
+
+A = input A\
+B = input B\
+O = Output\
+
+| A | B | O |
+|---|---|---|
+| 0 | 0 | 0 |
+| 1 | 0 | 1 |
+| 0 | 1 | 1 |
+| 1 | 1 | 0 |
+
+# Starter code 
+<details>
+  <Summary>Python</Summary>
+  
+  Two functions.
+
+  ```Python
+  # Reads in the hex string and returns a bytes object (its an array)
+  def readHexStr(hexStr : str) -> bytes:
+  # converts a bytes object to a ASCII string
+  def bytesToASCII(hex : bytes) -> str: 
+
+  # if you dont already know
+  # this is typed enforced python
+  def funcName(arg : Arg_Type) -> Function_Return_Type:
+  ```
+
+</details>
+
+<details>
+  <Summary>Java</Summary>
+  
+  I've written a class to help convert the types so you can focus on the challenges.\
+  Here is the UML for the class
+  ```mermaid
+  classDiagram
+    class SimpleCTF {
+      SimpleCTF(String hexString)
+      SimpleCTF(byte[] byteArry)
+
+      String getHexString()
+      byte[] getByteArray()
+      String getASCII()
+    }
+  ```
+  This class handles all the conversions that you'll need to perform.\
+  It has two constructors so you can pass in either the hex string or a byte array.\
+  Keep that in mind when working on the challenges.
+</details>
+
 
 # ASCII
 <a name="ASCII"></a>
