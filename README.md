@@ -52,11 +52,11 @@ Flag `796f7376726b65697a6c8149394759365865494f564e4b58654f5965595b4883`
 <details>
   <Summary>Hint 2</Summary>
   
-  # Python
+  ## Python
 
   You'll need to use a seperate array to store the updated bytes and then convert it back using `bytes(array)`.
 
-  # Java
+  ## Java
 
   You'll likely need to cast the resulting value back to bytes, and you may need to `%` by `255` or `0xFF` to properly wrap it around.
 
@@ -76,4 +76,17 @@ Flag `62787c617d744e7265776a4921434e58424e5f2250456c`
 
    You can XOR the first character of the flag with `s` as its the first character in the flag format.\
    The resulting value will be the value used in the XOR operation.
+</details>
+
+# Rolling XOR
+<a name="RollingXOR"></a>
+
+I've hidden this flag using XOR in a way you'll never guess!
+
+Flag `731a77076b0e513246205b0232672b673876451356045b083b7e21753d74413c`
+
+<details>
+  <Summary>Hint</Summary>
+
+  Each character has been XOR'd with the byte before it, excluding the first character, which has been left alone
 </details>
