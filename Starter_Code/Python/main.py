@@ -1,7 +1,13 @@
 import sys
-from simpleCTF import convertHex
+from simpleCTF import readHexStr, bytesToASCII
 for arg in sys.argv[1:]:
-    hex = convertHex(arg)
-    for i in range(len(hex)):
-        print(hex[i], end=" ")
-    print()
+    hex = readHexStr(arg)
+    print(f"Hex String : {arg}")
+    print(f"Bytes array : ", end="")
+    for ch in hex:
+        print(ch, end= " ")
+    print("") # hex newline
+    try:
+        print(f"ASCII : {bytesToASCII(hex)}")
+    except:
+        print("Error while converting to ASCII")
