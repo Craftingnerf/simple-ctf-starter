@@ -80,7 +80,7 @@ Flag `62787c617d744e7265776a4921434e58424e5f2250456c`
 </details>
 
 # Rolling XOR
-<a name="RollingXOR"/>
+<a name="RollingXOR"></a>
 
 I've hidden this flag using XOR in a way you'll never guess!
 
