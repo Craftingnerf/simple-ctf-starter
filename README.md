@@ -2,7 +2,7 @@
 Small CTF repo with starter code primarially to convert hex strings to bytes and back to hex or ASCII.
 
 There are currently 4 flags.\
-They are saved as a Hex String, so I included starter code in `Starter_Code/<Python/Java>` to help with conversions. See []\
+They are saved as a Hex String, so I included starter code in `Starter_Code/<Python/Java>` to help with conversions. See [below](#StarterCode) for relevant documentation.\
 - [ASCII](#ASCII)
 - [Caesar Cipher](#Caesar)
 - [XOR or XNOR](#XOR)
@@ -28,7 +28,7 @@ The space inside the `{ }` is where the flags differ.
 
 A = input A\
 B = input B\
-O = Output\
+O = Output
 
 | A | B | O |
 |---|---|---|
