@@ -20,7 +20,7 @@ The space inside the `{ }` is where the flags differ.
 - ASCII
   - A character encoding standard (i.e. `'s' == 115`)
 - XOR
-  - A bitwise operation (operates at the bit level) which is symmetrical ( A XOR B XOR B == A)
+  - A bitwise operation (operates at the bit level) which is symmetrical (A XOR B XOR B == A)
   - See its truth table [below](#XORTruthTable)
 
 <a name="XORTruthTable"></a>
