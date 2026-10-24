@@ -150,6 +150,8 @@ Thankfully XOR is a symmetrical operation. Try XOR-ing the flag with a known cha
 
 Flag `62787c617d744e7265776a4921434e58424e5f2250456c`
 
+In both Python and Java `^` is the XOR operator
+
 <details>
   <Summary>Hint</Summary>
 
