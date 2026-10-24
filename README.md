@@ -2,14 +2,31 @@
 Small CTF repo with starter code primarially to convert hex strings to bytes and back to hex or ASCII.
 
 There are currently 4 flags.\
-They are saved as a Hex String, so make sure to use the starter code to convert it to bytes
+They are saved as a Hex String, so I included starter code in `Starter_Code/<Python/Java>` to help with conversions.
 - [ASCII](#ASCII)
 - [Caesar Cipher](#Caesar)
 - [XOR or XNOR](#XOR)
 - [Rolling XOR](#RollingXOR)
 
 Each flag follows the same formula `simple_ctf{...}`.\
-The space inside the `{}` is where the flags differ.
+The space inside the `{ }` is where the flags differ.
+
+# Common terms
+
+- ciphertext
+  - Refers to information that has been encoded
+- plaintext
+  - Text that has not been encoded/encrypted
+- ASCII
+  - A character encoding standard (i.e. `'s' == 115`)
+- XOR
+  - A bitwise operation (operates at the bit level) which is symmetrical ( A XOR B XOR B == A)
+  | A | B | Out |
+  |---|---|-----|
+  | 0 | 0 | 0 |
+  | 1 | 0 | 1 |
+  | 0 | 1 | 1 |
+  | 1 | 1 | 0 |
 
 # ASCII
 <a name="ASCII"></a>
@@ -47,19 +64,29 @@ Flag `796f7376726b65697a6c8149394759365865494f564e4b58654f5965595b48595a4f5a5b5a
 <details>
   <Summary>Hint 1</Summary>
   
-  You can find the offset by subtracting the first character of the flag with `s` as its the first character in the flag format.\
+  You can find the offset by subtracting the first byte of the ciphertext with `s`, or its ASCII value of `115`, as its the first character in the flag format.
+  
+  **Python**
+  
+  You can convert characters to ASCII using `ord(char)` and convert ASCII numbers to characters through `chr(num)`
+
+  **Java**
+
+  You can convert characters to numbers via casting i.e. `(byte)'s'`
 
 </details>
 <details>
   <Summary>Hint 2</Summary>
   
-  ## Python
+  **Python**
 
-  You'll need to use a seperate array to store the updated bytes and then convert it back using `bytes(array)`.
+  You'll need to use a different array to store the updated bytes and then convert it back using `bytes(array)`.
 
-  ## Java
+  **Java**
 
-  You'll likely need to cast the resulting value back to bytes, and you may need to `%` by `255` or `0xFF` to properly wrap it around.
+  You'll likely need to cast the resulting value back to bytes, and you may need to `%` by `256` or `&` by `0xFF` to properly wrap it around.\
+  `%` is the modulo operator. I would describe it as the remainder from long devision. `%` by `256` will return a range of `0-255`.\
+  `&` is bitwise AND, it allows you to filter what bits you see in the resulting value. `&` by `0xFF` will only keep the first byte of the number.\
 
 </details>
 
@@ -68,14 +95,14 @@ Flag `796f7376726b65697a6c8149394759365865494f564e4b58654f5965595b48595a4f5a5b5a
 <a name="XOR"></a>
 
 Someone took the flag and XOR'd it with a random number!\
-Thankfully XOR is a symmetrical operation. try XORing the flag with a known character.
+Thankfully XOR is a symmetrical operation. Try XOR-ing the flag with a known character.
 
 Flag `62787c617d744e7265776a4921434e58424e5f2250456c`
 
 <details>
-  <Summary>Hint 1</Summary>
+  <Summary>Hint</Summary>
 
-   You can XOR the first character of the flag with `s` as its the first character in the flag format.\
+   You can XOR the first character of the flag with `s`, or its ASCII value of `115`, as its the first character in the flag format.\
    The resulting value will be the value used in the XOR operation.
 </details>
 
@@ -89,5 +116,5 @@ Flag `731a77076b0e513246205b0232672b673876451356045b083b7e21753d74413c`
 <details>
   <Summary>Hint</Summary>
 
-  Each character has been XOR'd with the byte before it, excluding the first character, which has been left alone
+  Each byte has been XOR'd with the ciphertext byte before it, excluding the first character, which has been left alone.
 </details>
