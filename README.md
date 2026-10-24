@@ -1,11 +1,12 @@
 # simple-ctf-starter
 Small CTF repo with starter code primarially to convert hex strings to bytes and back to hex or ASCII.
 
-There are currently 3 flags.\
+There are currently 4 flags.\
 They are saved as a Hex String, so make sure to use the starter code to convert it to bytes
 - [ASCII](#ASCII)
 - [Caesar Cipher](#Caesar)
 - [XOR or XNOR](#XOR)
+- [Rolling XOR](#RollingXOR)
 
 Each flag follows the same formula `simple_ctf{...}`.\
 The space inside the `{}` is where the flags differ.
@@ -79,7 +80,7 @@ Flag `62787c617d744e7265776a4921434e58424e5f2250456c`
 </details>
 
 # Rolling XOR
-<a name="RollingXOR"></a>
+<a name="RollingXOR"/>
 
 I've hidden this flag using XOR in a way you'll never guess!
 
